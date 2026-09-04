@@ -1,0 +1,110 @@
+.welcome {
+  background: var(--blanco-suave);
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.welcome-text .section-subtitle {
+  margin-bottom: 36px;
+}
+
+.welcome-points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.welcome-point {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.welcome-point-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: var(--verde);
+  color: var(--blanco);
+  box-shadow: 0 8px 20px rgba(2, 102, 52, 0.28);
+}
+
+.welcome-point h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.welcome-point p {
+  color: var(--gris);
+  font-size: 15px;
+}
+
+.welcome-card {
+  position: relative;
+  background: var(--negro);
+  color: var(--blanco);
+  border-radius: var(--radius-lg);
+  padding: 44px 38px;
+  box-shadow: var(--shadow-lg);
+}
+
+.welcome-card-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--amarillo);
+}
+
+.welcome-quote-mark {
+  color: var(--amarillo);
+  font-weight: 800;
+}
+
+.welcome-quote p {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.welcome-quote footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-quote-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.welcome-quote-role {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+}
+
+.welcome-card-stars {
+  margin-top: 22px;
+  color: var(--amarillo);
+  letter-spacing: 4px;
+}
+
+@media (max-width: 900px) {
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

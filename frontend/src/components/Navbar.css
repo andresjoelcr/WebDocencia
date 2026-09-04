@@ -1,0 +1,133 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--negro);
+  color: var(--blanco);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--verde);
+  color: var(--blanco);
+}
+
+.navbar-logo-text {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.navbar-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.82);
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #007e42;
+}
+
+.navbar-link-active,
+.navbar-links a.navbar-link-active,
+.navbar-links a.navbar-link-active:hover {
+  color: #ffce01;
+}
+
+.btn.navbar-cta {
+  padding: 11px 22px;
+  font-size: 16px;
+  background: #ffce01;
+  color: var(--negro);
+}
+
+.btn.navbar-cta:hover {
+  background: #e6b900;
+  color: var(--negro);
+}
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  color: var(--blanco);
+}
+
+.btn.navbar-cta-mobile {
+  background: #ffce01;
+  color: var(--negro);
+}
+
+.btn.navbar-cta-mobile:hover {
+  background: #e6b900;
+  color: var(--negro);
+}
+
+.navbar-mobile {
+  display: none;
+  padding: 16px 0 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.navbar-mobile ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.navbar-mobile ul a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 880px) {
+  .navbar-links,
+  .navbar-cta {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: grid;
+    place-items: center;
+  }
+
+  .navbar-mobile {
+    display: block;
+  }
+}

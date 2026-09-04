@@ -1,0 +1,26 @@
+# Variables de entorno y secretos
+.env
+.env.*
+
+# Entorno virtual de Python
+venv/
+env/
+ENV/
+.venv/
+
+# Cache de Python y compilados
+__pycache__/
+*.py[cod]
+
+# Base de datos SQLite local (opcional, si no quieres subir datos locales)
+*.sqlite3
+
+# Archivos de configuración de IDEs y del sistema
+.vscode/
+.idea/
+.DS_Store
+
+# Dependencias y builds del frontend
+node_modules/
+dist/
+.DS_Store
