@@ -16,7 +16,6 @@ import {
   Briefcase,
   CheckCircle2,
 } from 'lucide-react'
-import Rain from '../components/Rain'
 import './ProtocolosSeguridad.css'
 
 const bullyingSteps = [
@@ -119,8 +118,6 @@ export default function ProtocolosSeguridad() {
 
   return (
     <section className="section proto">
-      <Rain image="/gota.png" count={20} />
-
       <div className="proto-progress" style={{ width: `${progress}%` }} />
 
       <div className="container proto-container">

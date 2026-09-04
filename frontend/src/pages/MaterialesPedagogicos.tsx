@@ -15,7 +15,6 @@ import {
   CheckCircle2,
   ChevronDown,
 } from 'lucide-react'
-import Rain from '../components/Rain'
 import './MaterialesPedagogicos.css'
 
 const criteriosSteps = [
@@ -108,8 +107,6 @@ export default function MaterialesPedagogicos() {
 
   return (
     <section className="section mate">
-      <Rain image="/gota.png" count={20} />
-
       <div className="mate-progress" style={{ width: `${progress}%` }} />
 
       <div className="container mate-container">

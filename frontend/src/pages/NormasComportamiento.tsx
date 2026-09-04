@@ -14,7 +14,6 @@ import {
   MessageSquareText,
   Ear,
 } from 'lucide-react'
-import Rain from '../components/Rain'
 import './NormasComportamiento.css'
 
 const conductCards = [
@@ -133,8 +132,6 @@ export default function NormasComportamiento() {
 
   return (
     <section className="section normas">
-      <Rain image="/gota.png" count={20} />
-
       <div className="normas-progress" style={{ width: `${progress}%` }} />
 
       <div className="container normas-container">

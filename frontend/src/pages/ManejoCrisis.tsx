@@ -16,7 +16,6 @@ import {
   CheckCircle2,
   ChevronDown,
 } from 'lucide-react'
-import Rain from '../components/Rain'
 import './ManejoCrisis.css'
 
 const desescalateSteps = [
@@ -125,8 +124,6 @@ export default function ManejoCrisis() {
 
   return (
     <section className="section crisis">
-      <Rain image="/gota.png" count={20} />
-
       <div className="crisis-progress" style={{ width: `${progress}%` }} />
 
       <div className="container crisis-container">

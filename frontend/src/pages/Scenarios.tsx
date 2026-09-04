@@ -1,5 +1,4 @@
 import { Sparkles, DoorOpen, MessageCircleQuestion, Presentation, ShieldAlert, Siren } from 'lucide-react'
-import Rain from '../components/Rain'
 import './Scenarios.css'
 
 const scenarios = [
@@ -9,12 +8,13 @@ const scenarios = [
     description:
       'Prepara el aula para el inicio de la clase: organiza el espacio, verifica los materiales y da una bienvenida adecuada a los estudiantes.',
     escena: 'EscenaPrepararAula',
+    image: '/img_prepararclase.png',
   },
   {
     icon: MessageCircleQuestion,
-    title: 'Atención a inquietudes',
+    title: 'Uso de Recursos en el aula',
     description:
-      'Responde de manera adecuada las inquietudes de los estudiantes, aclarando dudas con paciencia y claridad durante la clase.',
+      'Administra y utiliza de manera efectiva los recursos didácticos disponibles en el aula para potenciar el aprendizaje de los estudiantes.',
   },
   {
     icon: Presentation,
@@ -22,6 +22,7 @@ const scenarios = [
     description:
       'Imparte la clase manteniendo la atención del grupo: corrige a estudiantes distraídos, que conversan o interrumpen, de forma oportuna.',
     escena: 'ConducciónClase',
+    image: '/img_conduccionclase.png',
   },
   {
     icon: ShieldAlert,
@@ -29,6 +30,7 @@ const scenarios = [
     description:
       'Actúa ante situaciones que ocurren fuera del aula, como el acoso o bullying, aplicando una intervención adecuada y segura.',
     escena: 'Exterior',
+    image: '/img_escena_patio.png',
   },
   {
     icon: Siren,
@@ -41,7 +43,6 @@ const scenarios = [
 export default function Scenarios() {
   return (
     <section className="section scenarios">
-      <Rain image="/gota.png" count={20} />
       <div className="container scenarios-container">
         <div className="scenarios-head">
           <span className="section-tag anim-rise anim-rise-1">
@@ -69,12 +70,19 @@ export default function Scenarios() {
                   ? { href: `/unity.html?escena=${encodeURIComponent(s.escena)}` }
                   : {})}
               >
+                {s.image && (
+                  <img src={s.image} alt={s.title} className="scenario-card-image" />
+                )}
                 <span className="scenario-card-icon">
                   <s.icon size={26} />
                 </span>
                 <h3>{s.title}</h3>
                 <p>{s.description}</p>
-                {s.escena && <span className="scenario-card-hint">Ingresar →</span>}
+                {s.escena ? (
+                  <span className="scenario-card-hint">Ingresar →</span>
+                ) : (
+                  <span className="scenario-card-badge">En proceso</span>
+                )}
               </Element>
             )
           })}

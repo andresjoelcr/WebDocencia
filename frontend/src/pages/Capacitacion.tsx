@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { Sparkles, ShieldCheck, Scale, TriangleAlert, BookOpenCheck, ArrowRight } from 'lucide-react'
-import Rain from '../components/Rain'
 import './Capacitacion.css'
 
 const modules = [
@@ -37,7 +36,6 @@ const modules = [
 export default function Capacitacion() {
   return (
     <section className="section capacitacion">
-      <Rain image="/gota.png" count={20} />
       <div className="container capacitacion-container">
         <div className="capacitacion-head">
           <span className="section-tag anim-rise anim-rise-1">
