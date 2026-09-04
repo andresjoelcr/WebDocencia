@@ -42,7 +42,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <Link to="/#preguntas" className="btn btn-oscuro navbar-cta">
+        <Link to="/escenarios" className="btn btn-oscuro navbar-cta">
           Comenzar ahora
         </Link>
 
@@ -75,7 +75,7 @@ export default function Navbar() {
             ))}
           </ul>
           <Link
-            to="/#preguntas"
+            to="/escenarios"
             className="btn btn-primario navbar-cta-mobile"
             onClick={() => setOpen(false)}
           >
